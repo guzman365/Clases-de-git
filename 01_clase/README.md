@@ -10,6 +10,15 @@ Si estamos documentando algo en word, y borramos algo, recurrimos al `control + 
 
 En git, todos los cambios, asi se cierre el programa, computadora y o donde se encuentre, siempre podra regresar en el tiempo atras a los cambios que se hayan hecho, y a parte de eso van a poder mezclar las cosas. mezclar cambios de determinados puntos en el tiempo.
 
+___
+GIT PUEDE DETERCTAR CONFIGURACIONES DE LAS SIGUIENTES RUTAS
+```
+/etc/gitconfig
+~/.gitconfig
+.git/config
+```
+___
+
 ## Estados de git
 
 Working Directory (directorio de trabajo)

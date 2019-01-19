@@ -14,11 +14,19 @@
 
 * **`git config --global core.editor nano`**
 
-  PErmite configurar el editor de texto de tu preferencia.  
+  PErmite configurar el editor de texto de tu preferencia. (`git config --global core.editor "[your editor] -w"` this is to enforce git to wait your commit message on your editor)
 
 * **`git config --list`**
 
   Consultar las configuraciones. ASi mismo se puede filtrar con grep de la siguiente manera. Si se quieren ver las configuraciones relacionadas al usuario `git config --list | grep user`
+
+* **`git config --global alias.<cmd> <comando>`**
+
+  Permite configurar un alias para cualquier comando. el `<cmd>` hace referencia al alias que quieras asignarle al `<comando>`.
+
+* **`git config --global --unset <opcion>`**
+
+  Permite remover configuraciones globales.
 
 * **`git config <option>`**
 
@@ -44,6 +52,10 @@
 
   Permite confirmar los cambios para registrar este cambio en la carpeta `.git`. ej `git commit -m "deployed chat"`.
 
+* **`git commit`**
+
+  Permite confirmar los cambios para registrar este cambio en la carpeta `.git`. Sin embargo, abre el editor que se configuro en core.editor
+
 * **`git log`**
 
   Permite ver los gits realizados.
@@ -60,3 +72,22 @@
 
   Para cambiar el mensaje del ultimo commit. Este comando lo que hace es abrir el editor que se configuro previamente en las configuraciones globales.
 
+* **`git commit -a -m ""`**/**`git commit -am ""`**
+
+  Permite saltarnos el area de preparacion. siempre y cuando los archivos ya se esten siguiendo.
+
+* **`git rm`**
+
+  Elimina archivos rastrados del repositorio y de nuestro directorio de trabajo de manera que no aparezcan la proxima vez como archivos no rastreados.
+
+* **`git rm <file>`**
+
+  Elimina archivos rastrados del repositorio y de nuestro directorio de trabajo de manera que no aparezcan la proxima vez como archivos no rastreados.
+
+* **`git checkout -- <file>`**
+
+  Te permite descartar los cambios en el directorio. Por ejemplo recuperar un archivo eliminado. 
+
+* **`git mv <oldFile.ext> <newFile.ext>`**
+
+  Te permite renombrar un archivo y agregarlo al area de preparacion para confirmar el cambio de nombre. Sino utilizamos este comando y renombramos el archivo desde otra fuente. Git reconocera que hemos eliminado un archivo(nombre anterior) y tenemos un nuevo archivo(nuevo nombre). Los dos cambios, el archivo eliminado y el archivo agregado tenemos que agregarlos al area de preparacion para confirmar los cambios. Entonces al utilizar este comando para renombrar el archivo nos ahorramos tres comandos. 
