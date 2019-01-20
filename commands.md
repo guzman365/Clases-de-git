@@ -58,7 +58,7 @@
 
 * **`git log`**
 
-  Permite ver los gits realizados.
+  Muestra el historial de confirmaciones o commits. Entre las opciones del comando podemos encontrar. `--oneline`: nos muestra el historial abreviado. `--graph`: añade un pequeño grafico ASCII mostrando el historial de ramificaciones y uniones. Se puede limiar el numero de commits que queremos ver `git log -2`. asi mismo la opcion `--reverse` muestra los git al reves. ASi mismo con `--pretty`. Si se quiere filtrar por fechas `git log --after="yyyy-mm-dd <time/>00>"`, `git log --before="yyyy-mm-dd <time/>00>"` ASi mismo se pueden utilizar ambas.
 
 * **`git diff`**
 
