@@ -58,19 +58,19 @@
 
 * **`git log`**
 
-  Muestra el historial de confirmaciones o commits. Entre las opciones del comando podemos encontrar. `--oneline`: nos muestra el historial abreviado. `--graph`: añade un pequeño grafico ASCII mostrando el historial de ramificaciones y uniones. Se puede limiar el numero de commits que queremos ver `git log -2`. asi mismo la opcion `--reverse` muestra los git al reves. ASi mismo con `--pretty`. Si se quiere filtrar por fechas `git log --after="yyyy-mm-dd <time/>00>"`, `git log --before="yyyy-mm-dd <time/>00>"` ASi mismo se pueden utilizar ambas.
+  Muestra el historial de confirmaciones o commits. Entre las opciones del comando podemos encontrar. `--oneline`: nos muestra el historial abreviado. `--graph`: añade un pequeño grafico ASCII mostrando el historial de ramificaciones y uniones. Se puede limiar el numero de commits que queremos ver `git log -2`. asi mismo la opcion `--reverse` muestra los git al reves. ASi mismo con `--pretty`. Si se quiere filtrar por fechas `git log --after="yyyy-mm-dd <time/>00>"`, `git log --before="yyyy-mm-dd <time/>00>"` ASi mismo se pueden utilizar ambas. `--decorate`, muestra el master, que ramas estan apuntando a que rama el HEAD. `--all` para que muestre TODAS las ramas y todos los commits sin importar en que rama estan o en que punto de la historia este ubicado. 
 
 * **`git diff`**
 
-  Muestra cual es la diferencia entre el ultimo estado de este archivo o de la zona de trabajo respecto a los archivos que ya estan confirmados o commiteados. Los archivos de la zona de trabajo vs, los archivos que tenemos en `.git`. Una variante seria `git diff --staged` por si hay el mismo archivo en el area de preparacion y en el area de trabajo.
+  Muestra cual es la diferencia entre el ultimo estado de este archivo o de la zona de trabajo respecto a los archivos que ya estan confirmados o commiteados. Los archivos de la zona de trabajo vs, los archivos que tenemos en `.git`. Una variante seria `git diff --staged` por si hay el mismo archivo en el area de preparacion y en el area de trabajo. Asi mismo le podemos pasar los hash de los commits que deseamos comparar. `git diff <hash1> <hash2>`
 
 * **`git reset HEAD <filename>`**
 
-  Permite sacar un archivo del area de preparacion. ej `git reset HEAD readme.md` se esta sacando el archivo readme.md del area de preparacion, y se coloca nuevament en al area de preparacion.
+  Permite sacar un archivo del area de preparacion. ej `git reset HEAD readme.md` se esta sacando el archivo readme.md del area de preparacion, y se coloca nuevamente en el directorio de trabajo.
 
 * **`git commit --amend`**
 
-  Para cambiar el mensaje del ultimo commit. Este comando lo que hace es abrir el editor que se configuro previamente en las configuraciones globales.
+  Este comando te permite enmendar un commit. Por ejemplo si se hizo un commit pero se nos olvido agregar un ultimo archivo al commit. Asi mismo sirve para poder reparar el mensaje del commit. Sirve para poder agregar cambios a ese ultimo commit que hicimos. Esto es para modificar el commit mas reciente.
 
 * **`git commit -a -m ""`**/**`git commit -am ""`**
 
@@ -86,8 +86,16 @@
 
 * **`git checkout -- <file>`**
 
-  Te permite descartar los cambios en el directorio. Por ejemplo recuperar un archivo eliminado. 
+  Te permite descartar los cambios en el directorio. Por ejemplo recuperar un archivo eliminado. ASi mismo, te permite recuperar la version anterior de un archivo en dado caso se modifico.
 
 * **`git mv <oldFile.ext> <newFile.ext>`**
 
   Te permite renombrar un archivo y agregarlo al area de preparacion para confirmar el cambio de nombre. Sino utilizamos este comando y renombramos el archivo desde otra fuente. Git reconocera que hemos eliminado un archivo(nombre anterior) y tenemos un nuevo archivo(nuevo nombre). Los dos cambios, el archivo eliminado y el archivo agregado tenemos que agregarlos al area de preparacion para confirmar los cambios. Entonces al utilizar este comando para renombrar el archivo nos ahorramos tres comandos. 
+
+* **`git clone <url>`**
+
+  Permite clonar un repositorio remoto. asi mismo se le puede pasar la carpeta donde quieres ubicar el repositorio `git clone <url> [dir]`
+
+* **`git checkout <hash>`**
+
+  Para poder regresar a un punto especifico en la historia dentro de nuestra carpeta .git. Para poder regresar tenemos que regresar a master.
