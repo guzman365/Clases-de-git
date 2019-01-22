@@ -1,5 +1,11 @@
 # GIT
 
+suma de comprobacion => checksum
+
+[Uso basico de git](https://diego.com.es/uso-basico-de-git)
+
+**ES UNA BUENA PRACTICA HACER COMMITS PEQUEñOS, PARA QUE SE NOS HAGA MAS FACIL MANTENER EL CONTROL DE NUETRO PROYECTO**
+
 *Sistema de control de versiones*
 
 *Maquina de tiempo*

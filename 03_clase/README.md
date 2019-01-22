@@ -75,7 +75,7 @@ Significa que nos ahorramos el equivalente a tres comandos.
 ## Git log
 Permite Mostrar los commits.
 
-entre los cuales la opcion --oneline muestra los titulos. Esto es especialmente util porque solo nos interese conocer nada mas el hash. Que es lo que se utiliza para regresar a ese commit. 
+entre los cuales la opcion --oneline muestra los titulos. Esto es especialmente util porque solo nos interese conocer nada mas el checksum. Que es lo que se utiliza para regresar a ese commit. 
 
 --graph: se puede utilizar juntas o independientes. Esto muestra las ramificaciones y una grafica de la rama master con las otras ramas. 
 
@@ -94,7 +94,7 @@ ef90255 - Mau Reyes, 53 minutes ago : Se creo el archivo git-mv.md
 
 *En donde*
 
-* `%h` es el hash de confirmacion abreviada.
+* `%h` es el checksum de confirmacion abreviada.
 * `%an` el nombre del autor del commit.
 * `%ar` Fecha de autoria relativa.
 * `%s` titulo/asunto del commit.

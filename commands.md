@@ -34,7 +34,7 @@
 
 * **`git help <verb> ; git <verb> --help`**
 
-  Permite ver la documentacion de algun comando, ej `git help config`
+  Permite ver la documentacion de algun comando, ej `git help config`. **Para poder ver la ayuda en la terminal `git help` y `git <verb> help --info`**
 
 * **`git init`**
 
@@ -62,7 +62,7 @@
 
 * **`git diff`**
 
-  Muestra cual es la diferencia entre el ultimo estado de este archivo o de la zona de trabajo respecto a los archivos que ya estan confirmados o commiteados. Los archivos de la zona de trabajo vs, los archivos que tenemos en `.git`. Una variante seria `git diff --staged` por si hay el mismo archivo en el area de preparacion y en el area de trabajo. Asi mismo le podemos pasar los hash de los commits que deseamos comparar. `git diff <hash1> <hash2>`
+  `git diff --stat` que es el resumen.   Muestra cual es la diferencia entre el ultimo estado de este archivo o de la zona de trabajo respecto a los archivos que ya estan confirmados o commiteados. Los archivos de la zona de trabajo vs, los archivos que tenemos en `.git`. Una variante seria `git diff --staged` por si hay el mismo archivo en el area de preparacion y en el area de trabajo. Asi mismo le podemos pasar los checksum de los commits que deseamos comparar. `git diff <checksum1> <checksum2>`. 
 
 * **`git reset HEAD <filename>`**
 
@@ -96,6 +96,26 @@
 
   Permite clonar un repositorio remoto. asi mismo se le puede pasar la carpeta donde quieres ubicar el repositorio `git clone <url> [dir]`
 
-* **`git checkout <hash>`**
+* **`git checkout <checksum>`**
 
   Para poder regresar a un punto especifico en la historia dentro de nuestra carpeta .git. Para poder regresar tenemos que regresar a master.
+
+* **`git tag`**
+
+  Este comando lista las etiquetas en orden alfabetico. Muestra las etiquetas ya sea ligeras o anotadas.
+
+* **`git tag <nombre de etiqueta>`**
+
+  Permite crear una etiqueta, ya sea ligera (sin las opciones -a -s ni `-m`) o anotada. Cuando se ejecuta asi nomas. La etiqueta se añadira al ultimo commit. Ejemplo de un tag ligero => `git tag my-tag`. ejemplo de un tag anotado => `git tag -a v1.0 -m "Primera version estable"`. Ejemplo para poder agregar un una etiqueta que no sea la ultima =>  
+
+* **`git push --tags`**
+
+  Añadir las etiquetas locales al repositorio remoto
+
+* **`git tag -d <checksum>`**
+
+  Añadir las etiquetas locales al repositorio remoto
+
+* **`git show <tag||checksum>`**
+
+  *Es mas facil recordar etiqueta* Muestra, el commit, junto con los cambios relacionados. 

@@ -55,19 +55,19 @@ Si regresamos a un punto en en la historia de nuestros commits de git. Todos los
 
 Para poder ver las diferencias entre los commits o entre dos puntos para saber que e slo que realmente va a desaparecer.
 
-`git diff <hash1> <hash2>`
+`git diff <checksum1> <checksum2>`
 
 Nos muestra en rojo las cosas que eliminamos, y nos muestra en verde las cosas que agregamos.
 
 Para poder viajar en el tiempo o regresar a cierto punto de nuestro historial acumulado en git.
 
-`git checkout <hash>`
+`git checkout <checksum>`
 
 Para regresar al presente, tenemos que que regresar a master
 
 `git checkout master`
 
-Asi mismo, se puede etiquetar los hash para que no tengamos que recordar o estar copiando los hash.
+Asi mismo, se puede etiquetar los checksum para que no tengamos que recordar o estar copiando los checksum.
 
 ___
 *Cuando se regresa a un punto en la historia y no se logran ver todos los archivos, es porque esos archivos no existian en ese momento. Y cuando no se logran ver los archivos uno tiende a hacer muchas tonterias, una de ellas es volver a clonar el repositorio y volver a hacer los cambios y rehacer cosas, **Horas de trabajo** cuando dichos cambios ya estan en el repositorio.*
