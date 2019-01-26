@@ -62,7 +62,7 @@
 
 * **`git diff`**
 
-  `git diff --stat` que es el resumen.   Muestra cual es la diferencia entre el ultimo estado de este archivo o de la zona de trabajo respecto a los archivos que ya estan confirmados o commiteados. Los archivos de la zona de trabajo vs, los archivos que tenemos en `.git`. Una variante seria `git diff --staged` por si hay el mismo archivo en el area de preparacion y en el area de trabajo. Asi mismo le podemos pasar los checksum de los commits que deseamos comparar. `git diff <checksum1> <checksum2>`. 
+  `git diff --stat` que es el resumen.   Muestra cual es la diferencia entre el ultimo estado de este archivo o de la zona de trabajo respecto a los archivos que ya estan confirmados o commiteados. Los archivos de la zona de trabajo vs, los archivos que tenemos en `.git`. Una variante seria `git diff --staged` por si hay el mismo archivo en el area de preparacion y en el area de trabajo. Asi mismo le podemos pasar los checksum de los commits que deseamos comparar. `git diff <checksum1> <checksum2>`. Asi mismo se puede hacer entre ramas `git diff <branch_name>`
 
 * **`git reset HEAD <filename>`**
 
@@ -124,9 +124,17 @@
 
   Permite crear una rama. 
 
+* **`git checkout -b <nombre_rama>`**
+
+  Indica que vamos a saltar a una nueva rama que recien vamos a crear. Nos ahorra basicamente un comando.
+
 * **`git branch -d|--delete <nombre_rama>`**
 
-  Elimina una rama
+  Elimina una rama. Este comando funcionara, solo y solo si la rama ha sido fusionara a otra rama.
+
+* **`git branch -D <nombre_rama>`**
+
+  Elimina nombra_rama este o no fusionada con la rama actual. Se fuerza el borrado, se pierden los cambios.
 
 * **`git branch`**
 
@@ -135,3 +143,15 @@
 * **`git checkout <branch>`**
 
   Permite cambiarnos de rama.
+
+* **`git branch -v`**
+
+  Muestra las ramas con el ultimo commit pertenecientes a estas ramas.
+
+* **`git merge <another-branch>`**
+
+  Permite incorporar another-branch en la rama actual.
+
+* **`git branch --no-merged`**
+
+  Permite saber cuales son las ramas que no se han fusioado aun con la rama actual. Otra de las opciones que tenemos para saber cuales ramas eliminar es `git branch --merged`
