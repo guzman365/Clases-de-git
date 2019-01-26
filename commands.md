@@ -119,3 +119,19 @@
 * **`git show <tag||checksum>`**
 
   *Es mas facil recordar etiqueta* Muestra, el commit, junto con los cambios relacionados. 
+
+* **`git branch <nombre_rama>`**
+
+  Permite crear una rama. 
+
+* **`git branch -d|--delete <nombre_rama>`**
+
+  Elimina una rama
+
+* **`git branch`**
+
+  Lista todas las ramas y permite ver en cual es en la que estamos ubicados. Si no tenemos una terminal que nos ayude con git.
+
+* **`git checkout <branch>`**
+
+  Permite cambiarnos de rama.
