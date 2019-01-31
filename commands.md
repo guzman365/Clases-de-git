@@ -138,7 +138,7 @@
 
 * **`git branch`**
 
-  Lista todas las ramas y permite ver en cual es en la que estamos ubicados. Si no tenemos una terminal que nos ayude con git.
+  Lista todas las ramas y permite ver en cual es en la que estamos ubicados. Si no tenemos una terminal que nos ayude con git. Si le pasamos la opcion `--all` nos permitira ver las ramas ocultas.
 
 * **`git checkout <branch>`**
 
@@ -155,3 +155,27 @@
 * **`git branch --no-merged`**
 
   Permite saber cuales son las ramas que no se han fusioado aun con la rama actual. Otra de las opciones que tenemos para saber cuales ramas eliminar es `git branch --merged`
+
+* **`git remote add origin <url>`**
+
+  Permite vincular el repositorio a un lugar remoto en la nube.
+
+* **`git push origin <branch>`**
+
+  Permite subir el repositorio a la nube.
+
+* **`git fetch origin <branch>`**
+
+  Permite halar los cambios hechos en el repositorio remoto.
+
+* **`git push origin --delete branch`**
+
+  Permite eliminar una rama remota.
+
+* **`git remote add <nombre>`**
+
+  Permite agrega una url remota.
+
+* **`git pull <origin> <branch>`**
+
+  Permite hacer un fetch y un merge de inmediato en un solo comando.
